@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content__grid {
+  width: 95%;
+  background-color: lightblue;
+  display: grid;
+  /* grid-template-columns: 200px 200px 200px; contenedor dividido en tres columnas, el contenido se desborda */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Así el contenido no se desborda, las columnas ocupan una fracción, si no especificas filas se crean de forma automática*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
+
+.box {
+  border: 1px solid blue;
+}
+
+.box4 {
+  /* grid-column: span 2;
+  grid-column: 2 /3; */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  /*OCUPA TODO ESO PORQUE EN EL PARDE HEMOS INDICADO QUE LA SEGUNDA LÍNEA TENDRÁ 500PX*/
+}

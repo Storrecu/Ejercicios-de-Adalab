@@ -1,0 +1,15 @@
+.btn-1 {
+  background-color: purple;
+  padding: 10px;
+  border: solid 2px black;
+}
+
+.btn-2 {
+  background-color: purple;
+  padding: 10px;
+  border: solid 2px black;
+}
+
+.hidden {
+  opacity: 0.2;
+}

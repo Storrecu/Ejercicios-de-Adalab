@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* DISEÑO A APLICAR:
+ 
+  versión mobile: 
+    imagenes direccion columna 
+    barra de navegación no debe verse 
+    aside oculto
+
+  versión tablet:
+    ver menu uno al lado del otro 
+    imagen 1 se hace + grande que el resto
+
+  versión desktop:
+    imagenes en línea
+
+    COMÚN A TODOS: 
+    cabecera fija
+
+ */
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+}
+
+/* .header {
+  text-align: center;
+}   Esto sería otra solución, pero con flexbox hemos cumplido uno de los requisitos del diseño mobile que era ocultar el nav del header*/
+
+.header-menu {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.imagen {
+  width: 200px;
+  border: 5px solid rebeccapurple;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.imagen img {
+  width: 100%;
+}
+
+/* Ahora crearemos el media query para tablet */
+
+@media (min-width: 736px) {
+  .header-menu {
+    display: block;
+  }
+  .header-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  .header {
+    justify-content: space-around;
+  }
+
+  /* .ppal {
+    width: 50%;
+  } Esto es una solución pero si no queremos crear una clase haremos lo siguiente: */
+
+  .imagen:first-child {
+    width: 50%;
+  }
+}
+
+@media (min-width: 890px) {
+  .main {
+    flex-direction: row;
+  }
+
+  .imagen,
+  .imagen:first-child {
+    width: 100%;
+    max-width: 350px;
+  }
+}

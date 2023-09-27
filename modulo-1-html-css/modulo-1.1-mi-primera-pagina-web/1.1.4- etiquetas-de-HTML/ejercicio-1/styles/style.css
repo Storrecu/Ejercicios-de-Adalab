@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+caption {
+  font-size: 40px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+thead th {
+  width: 15%;
+}
+
+.first-line td {
+  background-color: cyan;
+}

@@ -1,0 +1,10 @@
+.cabecera {
+  background-color: blueviolet;
+  position: fixed;
+  width: 100%; /* Esto hace que la cabecera se muestre por encima de main, pero es transparente y se ve por debajo el texto de main.*/
+  z-index: 5; /*  Esto es lo que hace que la cabecera se muestre por encima de main de forma "sólida"*/
+}
+
+.main-container {
+  position: relative;
+}

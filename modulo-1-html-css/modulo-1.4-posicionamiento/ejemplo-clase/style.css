@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: burlywood;
+  /* position: fixed;
+  width: 100%; */
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+/* .main{
+  padding-top: 100px;
+} */
+
+footer {
+  position: relative;
+  margin-top: 10px;
+  background-color: blanchedalmond;
+}
+
+.img-chat {
+  width: 100px;
+}
+
+.content-chat {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  bottom: 0;
+}
+
+.link {
+  background-color: blueviolet;
+  padding: 5px;
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 10px;
+  position: absolute;
+  top: -25px; /* En este caso la imágen azul se sube a la altura del header, pero queremos que el cuadrado azul se situe dentro del footer en la parte superior. Position absolute, se posiciona en referencia a su ancestro con position diferente de static, así que a su padre, el footer, tendremos que darle position relative. En ese momento el icono quedará contenido dentro de su padre, ya que lo tendrá como referencia.*/
+  margin-left: 50%;
+  transform: translateX(-50%) rotate(45deg) scale(1.2);
+}
+
+.icon:hoover {
+  transform: translateX(-50%) rotate(45deg) scale(1.2);
+}
